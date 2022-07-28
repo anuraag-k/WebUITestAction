@@ -46,39 +46,39 @@ inputs:
     required: false
     
   labels:
-    description: 'Use this option to set report type csv or json'
+    description: 'Use this option to add labels to test results. To add multiple labels to a test result, you must separate each label by using a comma.'
     required: false
     
   overwrite:
-    description: 'Use this option to set report type csv or json'
+    description: 'Determines whether a result file with the same name is overwritten. The default value, false, indicates that the new result file is created. If the value is true, the file is overwritten and retains the same file name'
     required: false
     
   protocolInput:
-    description: 'Use this option to set report type csv or json'
+    description: 'Use this argument to run a Web UI test in parallel on different browsers.'
     required: false
     
   publish:
-    description: 'Use this option to set report type csv or json'
+    description: 'You can use this parameter to publish test results to the Server. The format is: serverURL#project.name=projectName&amp;teamspace.name=teamspaceName.'
     required: false
     
   publishFor:
-    description: 'Use this option to set report type csv or json'
+    description: You can use this option to publish the test results based on the completion status of the tests. The supported values are FAIL,PASS,INCONCLUSIVE,ERROR,ALL.
     required: false
 
   publishReports:
-    description: 'Use this option to set report type csv or json'
+    description: You can use this option to publish specific test results to the Server. The supported values are FT, STATS, TESTLOG.
     required: false
     
   results:
-    description: 'Use this option to set report type csv or json'
+    description: Specify a name for the results file. If you do not specify a name, the test or schedule name appended by the timestamp is used for the name. The results file is stored in the Results directory. If you are running multiple tests, do not provide a name for the results file.
     required: false
 
   userComments:
-    description: 'Use this option to set report type csv or json'
+    description: Add text to display it in the User Comments row of the report.
     required: false
     
   varFile:
-    description: 'Use this option to set report type csv or json'
+    description: The complete path to the XML file that contains the variable name and value pairs.
     required: false
 runs:
   using: 'node16'
