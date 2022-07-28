@@ -14,3 +14,4 @@ jobs:
             project: WebUI1
             suite: Test1
             imshared: C:\Program Files\IBM\IBMIMShared
+            configFile: C:\Users\anuraag.k\IBM\rationalsdp\workspace\WebUI1\config.txt
