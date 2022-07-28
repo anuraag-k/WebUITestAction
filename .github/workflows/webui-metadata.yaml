@@ -14,4 +14,8 @@ jobs:
             project: WebUI1
             suite: Test1
             imshared: C:\Program Files\IBM\IBMIMShared
-            configFile: C:\Users\anuraag.k\IBM\rationalsdp\workspace\WebUI1\config.txt
+            exportReport: type=unified;format=pdf;folder=D:\reports;filename=testreport
+            exportStats: D:\reports\
+            exportStatsHtml: D:\reports\html
+            exportStatsFormat: simple.json
+            
