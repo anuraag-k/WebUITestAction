@@ -20,4 +20,10 @@ jobs:
             exportStatsFormat: simple.json
             exportStatReportList: syncPoint
             labels: l1,l2
+            overwrite: true
+            protocolInput: "all.available.targets.in.parallel=all"
+            results: MyResult
+            userComments: This is a user comment
+            
+            
             
