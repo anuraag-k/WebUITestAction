@@ -13,3 +13,4 @@ jobs:
             workspace: C:\Users\anuraag.k\IBM\rationalsdp\workspace
             project: WebUI1
             suite: Test1
+            imshared: C:\Program Files\IBM\IBMIMShared
