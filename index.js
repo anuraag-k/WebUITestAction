@@ -24,75 +24,23 @@ const main = async () => {
         const exportreport = core.getInput('exportReport', { required: false });
         const exportstats = core.getInput('exportStats', { required: false });
         const exportstatshtml = core.getInput('exportStatsHtml', { required: false });
-        const multipleValues = core.getInput('multipleValues', { required: false });
 
-        var exportstatsformat;
-        var exportstatreportlist;
-        var imports;
-        var labels;
-        var overwrite;
-        var protocolinput;
-        var publish;
-        var publish_for;
-        var publishreports;
-        var results;
-        var usercomments;
-        var varfile;
-        var vmargs;
+        const exportstatsformat = core.getInput('exportStatsFormat', { required: false });
+        const exportstatreportlist = core.getInput('exportStatReportList', { required: false });
+        const imports = core.getInput('imports', { required: false });
+        const labels = core.getInput('labels', { required: false });
+        const overwrite = core.getInput('overwrite', { required: false });
+        const protocolinput = core.getInput('protocolinput', { required: false });
+        const publish = core.getInput('publish', { required: false });
+        const publish_for = core.getInput('publishFor', { required: false });
+        const publishreports = core.getInput('publishReports', { required: false });
+        const results = core.getInput('results', { required: false });
+        const usercomments = core.getInput('userComments', { required: false });
+        const varfile = core.getInput('varFile', { required: false });
+        const vmargs = core.getInput('vmArgs', { required: false });
         
         if (!imshared) {
             imshared = getImsharedLoc(productpath);
-        }
-
-        if (!isEmptyOrSpaces(multipleValues)) {
-            var mult_value = multipleValues.split('|');
-            for (var i = 0; i < mult_value.length; i++) {
-                var value = new Array(); 
-                value[0] = mult_value[i].toString().substring(0, mult_value[i].indexOf('='));
-                value[1] = mult_value[i].toString().substring(mult_value[i].indexOf('=')+1);
-                if (value.length != 2) {
-                    throw new Error(
-                        "Please enter input in keyvalue format seperated by '|'"
-                    );
-                } else if (isEmptyOrSpaces(value[0])) {
-                    throw new Error(
-                        "Input key is not given"
-                    );
-                } else if (isEmptyOrSpaces(value[1])) {
-                    throw new Error(
-                        "Input key value is not given"
-                    );
-                }
-                if (value[0] == 'exportStatsFormat') {
-                    exportstatsformat = value[1];
-                } else if (value[0] == 'exportStatReportList') {
-                    exportstatreportlist = value[1];
-                } else if (value[0] == 'imports') {
-                    imports = value[1];
-                }else if (value[0] == 'labels') {
-                    labels = value[1];
-                } else if (value[0] == 'overwrite') {
-                    overwrite = value[1];
-                } else if (value[0] == 'protocolInput') {
-                    protocolinput = value[1];
-                }else if (value[0] == 'publish') {
-                    publish = value[1];
-                } else if (value[0] == 'publishFor') {
-                    publish_for = value[1];
-                } else if (value[0] == 'publishReports') {
-                    publishreports = value[1];
-                } else if (value[0] == 'results') {
-                    results = value[1];
-                }else if (value[0] == 'users') {
-                    users = value[1];
-                }else if (value[0] == 'userComments') {
-                    usercomments = value[1];
-                }else if (value[0] == 'varFile') {
-                    varfile = value[1];
-                }else if (value[0] == 'vmArgs') {
-                    vmargs = value[1];
-                }
-            }
         }
 
         if (configfile) {
