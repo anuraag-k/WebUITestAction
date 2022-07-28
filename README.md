@@ -83,7 +83,7 @@ jobs:
 
 ### `exportReport`
 
-**Optional** Export the unified report.
+**Optional** Use this option to export the unified report of UI tests to the file formats such as PDF, HTML, and XML. For example, to export the report to only the PDF format, you can input "type=unified;format=pdf;folder=Exportedreport102;filename=testreport"
 
 ### `exportStats`
 
@@ -94,38 +94,37 @@ jobs:
 **Optional** Specify the complete path to a directory in which to export web analytic results. Analyze the results on a web browser without using the HCL OneTest Studio. If you are running multiple tests, do not provide a value in this field. The web analytic results will be exported to Jenkins workspace.
 
 ### `exportStatsFormat`
-Use this option to set the report type json or csv.
+**Optional** Use this field to enter one or more formats for the reports that you want to export by using a comma as a separator. The options are simple.csv, full.csv, simple.json, full.json, csv, and json. When you want to export both simple and full reports in json or csv format, you can specify json or csv as the options. The reports are saved to the location specified in the exportStats field. This field must be used in conjunction with exportStats field.
 
 ### `exportStatReportList`
-A comma-separated list of absolute paths to custom report format files (.view files) to use when exporting statistical report data with the-exportstats option.
+**Optional** You can use this option to specify a comma-separated list of report IDs along with exportstats or exportstatshtml to list the reports that you want to export in place of the default reports, or the reports selected under Preferences. To retrieve the report IDs, navigate to Window > Preferences > Test > Performance Test Reports > Export Reports from HCL OneTest UI and under Select reports to export, select the required reports, and click Copy ID to clipboard.
 
 ### `imports`
-Path of the Project location to be imported.
+**Optional** Path of the Project location to be imported. You can also use an empty workspace folder on your computer to import the UI Test project resources and run the tests. 
 
 ### `labels`
-Use this option to add labels to test results. To add multiple labels to a test result, you must separate each label by using a comma.
+**Optional** Use this option to add labels to test results. To add multiple labels to a test result, you must separate each label by using a comma.
 
 ### `overwrite`
-Determines whether a results file with the same name is overwritten. The default value, true, means that the results file is overwritten.
+**Optional** Determines whether a result file with the same name is overwritten. The default value, false, indicates that the new result file is created. If the value is true, the file is overwritten and retains the same file name.
 
 ### `protocolInput`
-Use this argument to run a Web UI test in parallel on different browsers.
+**Optional** Use this argument to run a Web UI test in parallel on different browsers.
 
 ### `publish`
-You can use this parameter to publish test results to the Server.
+**Optional** You can use this parameter to publish test results to the Server. The format is: serverURL#project.name=projectName&amp;teamspace.name=teamspaceName.
 
 ### `publishFor`
-You can use this option to publish the test results based on the completion status of the tests.
+ **Optional** You can use this option to publish the test results based on the completion status of the tests. The supported values are FAIL,PASS,INCONCLUSIVE,ERROR,ALL.
 
 ### `publishReports`
-You can use this option to publish specific test results to the Server.
+**Optional** You can use this option to publish specific test results to the Server. The supported values are FT, STATS, TESTLOG.
 
 ### `results`
-Specify a name for the results file. If you do not specify a name, the test or schedule name appended by the timestamp is used for the name. The results file is stored in the Results directory. If you are running multiple tests, do not provide a name for the results file.
+**Optional** Specify a name for the results file. If you do not specify a name, the test or schedule name appended by the timestamp is used for the name. The results file is stored in the Results directory. If you are running multiple tests, do not provide a name for the results file.
 
 ### `userComments`
-Add text within double quotation mark to display it in the User Comments row of the report.
+**Optional** Add text to display it in the User Comments row of the report.
 
 ### `varFile`
-The complete path to the XML file that contains the variable name and value pairs.
-
+**Optional** The complete path to the XML file that contains the variable name and value pairs.
