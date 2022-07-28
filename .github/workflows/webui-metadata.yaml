@@ -10,10 +10,10 @@ jobs:
          - name: HCL OneTest WEBUI
            uses: anuraag-k/WebUITestAction@main
            with:
-            workspace: D:\reports\dummyworkspace
+            workspace: C:\Users\anuraag.k\IBM\rationalsdp\workspace
             project: WebUI1
-            suite: Test1
+            suite: C1
             imshared: C:\Program Files\IBM\IBMIMShared
-            imports: D:\reports\WebUI1
+            varFile: C:\Users\anuraag.k\IBM\rationalsdp\workspace\WebUI1\varfile.varinit
             
             
