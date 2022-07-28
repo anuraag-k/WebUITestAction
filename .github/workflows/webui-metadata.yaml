@@ -23,7 +23,7 @@ jobs:
             overwrite: true
             results: MyResult
             userComments: This is a user comment
-            publish: https://master-hcl.tp-k8s.nonprod.hclpnp.com#project.name=A_P2%26teamspace.name=Initial%20Team%20Space
+            publish: https://master-hcl.tp-k8s.nonprod.hclpnp.com%23project.name=A_P2%26teamspace.name=Initial%20Team%20Space
             
             
             
