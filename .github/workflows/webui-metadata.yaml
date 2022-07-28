@@ -1,0 +1,55 @@
+name: HCL OneTest WEBUI
+
+on:
+    workflow_dispatch:
+        inputs:
+            workspace:
+                description: 'Workspace'
+                required: true
+            project:
+                description: 'Project'
+                required: true
+            suite:
+                description: 'Test Suite Name'
+                required: true
+            imShared:
+                description: 'IMShared Location'
+                required: false
+            configFile:
+                description: 'Configuration File'
+                required: false
+            swapDatasets:
+                description: 'Dataset Override'
+                required: false
+            exportReport:
+                description: 'Export Report'
+                required: false
+            exportStats:
+                description: 'Export Stats'
+                required: false
+            exportStatsHtml:
+                description: 'Export stats html'
+                required: false
+            multipleValues:
+                description: 'Multiplevalue inputs'
+                required: false
+
+jobs:
+
+    WebUI-Action:
+        runs-on: self-hosted
+        name: HCL OneTest WEBUI
+        steps:
+         - name: HCL OneTest WEBUI
+           uses: SonaHJ/WebUIAction@main
+           with:
+            workspace: '${{ github.event.inputs.workspace }}'
+            project: '${{ github.event.inputs.project }}'
+            suite: '${{ github.event.inputs.suite }}'
+            imShared: '${{ github.event.inputs.imShared }}'
+            configFile: '${{ github.event.inputs.configFile }}'
+            swapDatasets: '${{ github.event.inputs.swapDatasets }}'
+            exportReport: '${{ github.event.inputs.exportReport }}'
+            exportStats: '${{ github.event.inputs.exportStats }}'
+            exportStatsHtml: '${{ github.event.inputs.exportStatsHtml }}'
+            multipleValues: '${{ github.event.inputs.multipleValues }}'
