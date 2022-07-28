@@ -37,9 +37,6 @@ inputs:
     description: 'Use this option to set report type csv or json'
     required: false
 
-  exportStatsFormat: 
-    description: 'Specify the remaining inputs in the Key=Value format. Ex: Key1=Value1|Key2=Value2. Refer ReadMe'
-    required: false
 runs:
   using: 'node16'
   main: 'dist/index.js'
