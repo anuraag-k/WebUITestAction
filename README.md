@@ -13,42 +13,9 @@ This action enables you to run HCL OneTest WEBUI tests.
 ```yaml
 name: HCL OneTest WEBUI
 
-on:
-    workflow_dispatch:
-        inputs:
-            workspace:
-                description: 'Workspace'
-                required: true
-            project:
-                description: 'Project'
-                required: true
-            suite:
-                description: 'Test Suite Name'
-                required: true
-            imShared:
-                description: 'IMShared Location'
-                required: false
-            configFile:
-                description: 'Configuration File'
-                required: false
-            swapDatasets:
-                description: 'Dataset Override'
-                required: false
-            exportReport:
-                description: 'Export Report'
-                required: false
-            exportStats:
-                description: 'Export Stats'
-                required: false
-            exportStatsHtml:
-                description: 'Export stats html'
-                required: false
-            multipleValues:
-                description: 'Multiplevalue inputs'
-                required: false
+on: workflow_dispatch
 
 jobs:
-
     WebUI-Action:
         runs-on: self-hosted
         name: HCL OneTest WEBUI
@@ -56,16 +23,27 @@ jobs:
          - name: HCL OneTest WEBUI
            uses: SonaHJ/WebUIAction@main
            with:
-            workspace: '${{ github.event.inputs.workspace }}'
-            project: '${{ github.event.inputs.project }}'
-            suite: '${{ github.event.inputs.suite }}'
-            imShared: '${{ github.event.inputs.imShared }}'
-            configFile: '${{ github.event.inputs.configFile }}'
-            swapDatasets: '${{ github.event.inputs.swapDatasets }}'
-            exportReport: '${{ github.event.inputs.exportReport }}'
-            exportStats: '${{ github.event.inputs.exportStats }}'
-            exportStatsHtml: '${{ github.event.inputs.exportStatsHtml }}'
-            multipleValues: '${{ github.event.inputs.multipleValues }}'
+            workspace: 
+            project: 
+            suite: 
+            imShared: 
+            configFile: 
+            swapDatasets: 
+            exportReport: 
+            exportStats: 
+            exportStatsHtml: 
+            exportStatsFormat: 
+	    exportStatReportList: 
+	    imports: 
+	    labels: 
+	    overwrite: 
+	    protocolInput: 
+	    publish: 
+	    publishFor: 
+	    publishReports: 
+	    results: 
+	    userComments: 
+	    varFile: 	    
 
 ```
 4. Push it into the main branch
@@ -114,21 +92,6 @@ jobs:
 ### `exportStatsHtml`
 
 **Optional** Specify the complete path to a directory in which to export web analytic results. Analyze the results on a web browser without using the HCL OneTest Studio. If you are running multiple tests, do not provide a value in this field. The web analytic results will be exported to Jenkins workspace.
-
-### `multipleValues`
-
-you may only define up to 10 inputs for a workflow_dispatch event. Remaining inputs need to be Key=Value pair.
-
-https://github.community/t/you-may-only-define-up-to-10-inputs-for-a-workflow-dispatch-event/160733
-
-https://github.com/github/docs/issues/15710
-
-Specify the below inputs in the Key=Value format.
-	Ex: publish=publish_urlVal|labels=Value2
-	
-**Required** Note that separator between the key-value pairs is '|' character.
-
-## Supported multiplevalue inputs
 
 ### `exportStatsFormat`
 Use this option to set the report type json or csv.
