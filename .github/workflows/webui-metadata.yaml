@@ -18,4 +18,6 @@ jobs:
             exportStats: D:\reports\
             exportStatsHtml: D:\reports\html
             exportStatsFormat: simple.json
+            exportStatReportList: syncPoint
+            labels: l1,l2
             
