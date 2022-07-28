@@ -8,7 +8,7 @@ jobs:
         name: HCL OneTest WEBUI
         steps:
          - name: HCL OneTest WEBUI
-           uses: SonaHJ/WebUIAction@main
+           uses: anuraag-k/WebUIAction@main
            with:
             workspace: C:\Users\anuraag.k\IBM\rationalsdp\workspace
             project: WebUI1
