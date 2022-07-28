@@ -37,6 +37,49 @@ inputs:
     description: 'Use this option to set report type csv or json'
     required: false
 
+  exportStatReportList:
+    description: 'Use this option to set report type csv or json'
+    required: false
+    
+  imports:
+    description: 'Use this option to set report type csv or json'
+    required: false
+    
+  labels:
+    description: 'Use this option to set report type csv or json'
+    required: false
+    
+  overwrite:
+    description: 'Use this option to set report type csv or json'
+    required: false
+    
+  protocolInput:
+    description: 'Use this option to set report type csv or json'
+    required: false
+    
+  publish:
+    description: 'Use this option to set report type csv or json'
+    required: false
+    
+  publishFor:
+    description: 'Use this option to set report type csv or json'
+    required: false
+
+  publishReports:
+    description: 'Use this option to set report type csv or json'
+    required: false
+    
+  results:
+    description: 'Use this option to set report type csv or json'
+    required: false
+
+  userComments:
+    description: 'Use this option to set report type csv or json'
+    required: false
+    
+  varFile:
+    description: 'Use this option to set report type csv or json'
+    required: false
 runs:
   using: 'node16'
   main: 'dist/index.js'
