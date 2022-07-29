@@ -29,6 +29,7 @@ jobs:
             imShared: 
             configFile: 
             swapDatasets: 
+            exportLog: 
             exportReport: 
             exportStats: 
             exportStatsHtml: 
@@ -81,6 +82,10 @@ jobs:
 ### `swapDatasets`
 
 **Optional** Use this option to replace dataset values during a test or schedule run. You must ensure that both original and new datasets are in the same workspace and have the same column names. You must also include the path to the dataset. For example, /project_name/ds_path/ds_filename.csv:/project_name/ds_path/new_ds_filename.csv
+
+### `exportLog`
+
+**Optional** You can use this parameter to specify the file directory path to store the exported HTTP test log. You can provide multiple parameter entries when running multiple tests. You must use a colon to separate the parameter entries. For example: c:/logexport.txt:c:/secondlogexport.txt
 
 ### `exportReport`
 
