@@ -1,10 +1,6 @@
 name: 'HCL OneTest WEBUI'
 description: 'This Action to execute WebUI test from GitHub Action.'
 inputs:
-  imshared:
-    description: 'The path to the IMShared folder in your local installation, if it is not at default location. This is where plugins and product dependencies will be located by the execution agent, required if Config File is not specified'
-    required: false
-
   workspace:
     description: 'The complete path to the Eclipse workspace, required if Config File is not specified'
     required: true
@@ -16,6 +12,10 @@ inputs:
   suite:
     description: 'The name of a test within the project to use. A test can be WebUI test, Compound test, Performance schedule or Accelerated Functional Test (AFT) suite, required if Config File is not specified'
     required: true
+
+  imshared:
+    description: 'The path to the IMShared folder in your local installation, if it is not at default location. This is where plugins and product dependencies will be located by the execution agent, required if Config File is not specified'
+    required: false
 
   configFile:
     description: 'Use this option to specify the complete path to a file that contains the parameters for a test run.'
@@ -66,27 +66,27 @@ inputs:
     required: false
     
   publishFor:
-    description: You can use this option to publish the test results based on the completion status of the tests. The supported values are FAIL,PASS,INCONCLUSIVE,ERROR,ALL.
+    description: 'You can use this option to publish the test results based on the completion status of the tests. The supported values are FAIL,PASS,INCONCLUSIVE,ERROR,ALL.'
     required: false
 
   publishReports:
-    description: You can use this option to publish specific test results to the Server. The supported values are FT, STATS, TESTLOG.
+    description: 'You can use this option to publish specific test results to the Server. The supported values are FT, STATS, TESTLOG.'
     required: false
     
   results:
-    description: Specify a name for the results file. If you do not specify a name, the test or schedule name appended by the timestamp is used for the name. The results file is stored in the Results directory. If you are running multiple tests, do not provide a name for the results file.
+    description: 'Specify a name for the results file. If you do not specify a name, the test or schedule name appended by the timestamp is used for the name. The results file is stored in the Results directory. If you are running multiple tests, do not provide a name for the results file.'
     required: false
 
   userComments:
-    description: Add text to display it in the User Comments row of the report.
+    description: 'Add text to display it in the User Comments row of the report.'
     required: false
     
   varFile:
-    description: The complete path to the XML file that contains the variable name and value pairs.
+    description: 'The complete path to the XML file that contains the variable name and value pairs.'
     required: false
     
   vmArgs:
-    description: To specify the Java™ maximum heap size for the Java™ process that controls the command line playback, use this option with the -Xmx argument. For example, when you input -Xmx4096m, it specifies a maximum heap size of 4096m. To execute tests in parallel on all mobile devices, which are in passive mode, connected to the workbench and ready for playback, input the value: "-Dall.available.targets.in.parallel=true". To execute tests in parallel on all supported desktop browsers and connected mobile devices, input the value "-Dall.available.targets.in.parallel=all". To execute tests in parallel on selected desktop browsers and connected mobile devices, input the value "-Dall.available.targets.in.parallel=browser1,browswer2,browser3". You must separate browser names with a comma. For example, firefox, ff, chrome, ie, ie64, safari, "-Dall.available.targets.in.parallel=browser1,browser2,browser3".
+    description: 'To specify the Java™ maximum heap size for the Java™ process that controls the command line playback, use this option with the -Xmx argument. For example, when you input -Xmx4096m, it specifies a maximum heap size of 4096m. To execute tests in parallel on all mobile devices, which are in passive mode, connected to the workbench and ready for playback, input the value: "-Dall.available.targets.in.parallel=true". To execute tests in parallel on all supported desktop browsers and connected mobile devices, input the value "-Dall.available.targets.in.parallel=all". To execute tests in parallel on selected desktop browsers and connected mobile devices, input the value "-Dall.available.targets.in.parallel=browser1,browswer2,browser3". You must separate browser names with a comma. For example, firefox, ff, chrome, ie, ie64, safari, "-Dall.available.targets.in.parallel=browser1,browser2,browser3".'
     required: false    
 runs:
   using: 'node16'
