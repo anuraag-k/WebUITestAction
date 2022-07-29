@@ -24,7 +24,7 @@ const main = async () => {
         const exportreport = core.getInput('exportReport', { required: false });
         const exportstats = core.getInput('exportStats', { required: false });
         const exportstatshtml = core.getInput('exportStatsHtml', { required: false });
-
+		const exportlog = core.getInput('exportLog', false);
         const exportstatsformat = core.getInput('exportStatsFormat', { required: false });
         const exportstatreportlist = core.getInput('exportStatReportList', { required: false });
         const imports = core.getInput('imports', { required: false });
@@ -97,6 +97,9 @@ const main = async () => {
             if (overwrite) {
                 script = script.concat(' -overwrite ' + '"' + overwrite + '"')
             }
+			if (exportlog) {
+                script = script.concat(' -exportlog ' + '"' + exportlog + '"')
+            }			
             if (exportstats) {
                 script = script.concat(' -exportstats ' + '"' + exportstats + '"')
             }
