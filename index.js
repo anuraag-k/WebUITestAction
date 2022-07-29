@@ -130,6 +130,9 @@ const main = async () => {
             if (publishreports) {
                 script = script.concat(' -publishreports ' + '"' + publishreports + '"')
             }
+            if (vmargs) {
+                script = script.concat(' -vmargs ' + '"' + vmargs + '"')
+            }			
         }
 
 
