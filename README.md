@@ -21,7 +21,7 @@ jobs:
         name: HCL OneTest WEBUI
         steps:
          - name: HCL OneTest WEBUI
-           uses: SonaHJ/WebUIAction@main
+           uses: anuraag-k/WebUITestAction@main
            with:
             workspace: 
             project: 
@@ -43,7 +43,8 @@ jobs:
             publishReports: 
             results: 
             userComments:
-            varFile: 	    
+            varFile: 
+            vmArgs: 
 
 ```
 4. Push it into the main branch
