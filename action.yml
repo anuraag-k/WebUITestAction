@@ -18,7 +18,11 @@ inputs:
     required: true
 
   configFile:
-    description: 'Use this option to specify the complete path to a file that contains the parameters for a test run'
+    description: 'Use this option to specify the complete path to a file that contains the parameters for a test run.'
+    required: false
+
+  swapDatasets:
+    description: 'Use this option to replace dataset values during a test or schedule run. You must ensure that both original and new datasets are in the same workspace and have the same column names. You must also include the path to the dataset. For example, /project_name/ds_path/ds_filename.csv:/project_name/ds_path/new_ds_filename.csv'
     required: false
 
   exportReport:
@@ -26,7 +30,7 @@ inputs:
     required: false
 
   exportStats:
-    description: 'Use this option to export reports in comma-separated values (CSV) format'
+    description: 'Use this option to provide the complete path to a directory that you can use to store the exported report in a comma-separated values (CSV) format.'
     required: false
 
   exportStatsHtml:
@@ -34,15 +38,15 @@ inputs:
     required: false
 
   exportStatsFormat:
-    description: 'Use this option to set report type csv or json'
+    description: 'Use this field to enter one or more formats for the reports that you want to export by using a comma as a separator. The options are simple.csv, full.csv, simple.json, full.json, csv, and json. When you want to export both simple and full reports in json or csv format, you can specify json or csv as the options. The reports are saved to the location specified in the exportStats field. This field must be used in conjunction with exportStats field.'
     required: false
 
   exportStatReportList:
-    description: 'Use this option to set report type csv or json'
+    description: 'You can use this option to specify a comma-separated list of report IDs along with exportstats or exportstatshtml to list the reports that you want to export in place of the default reports, or the reports selected under Preferences. To retrieve the report IDs, navigate to Window > Preferences > Test > Performance Test Reports > Export Reports from HCL OneTest UI and under Select reports to export, select the required reports, and click Copy ID to clipboard.'
     required: false
     
   imports:
-    description: 'Use this option to set report type csv or json'
+    description: 'Path of the Project location to be imported. You can also use an empty workspace folder on your computer to import the UI Test project resources and run the tests.'
     required: false
     
   labels:
