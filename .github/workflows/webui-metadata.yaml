@@ -14,6 +14,5 @@ jobs:
             project: WebUI1
             suite: Test1
             imshared: C:\Program Files\IBM\IBMIMShared
-            swapDatasets: /WebUI1/test2.csv:/WebUI1/test.csv
-            
+            vmArgs: -Dall.available.targets.in.parallel=true
             
