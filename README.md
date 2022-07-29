@@ -33,17 +33,17 @@ jobs:
             exportStats: 
             exportStatsHtml: 
             exportStatsFormat: 
-	    exportStatReportList: 
-	    imports: 
-	    labels: 
-	    overwrite: 
-	    protocolInput: 
-	    publish: 
-	    publishFor: 
-	    publishReports: 
-	    results: 
-	    userComments: 
-	    varFile: 	    
+            exportStatReportList: 
+            imports: 
+            labels: 
+            overwrite: 
+            protocolInput: 
+            publish: 
+            publishFor: 
+            publishReports: 
+            results: 
+            userComments:
+            varFile: 	    
 
 ```
 4. Push it into the main branch
@@ -109,10 +109,15 @@ jobs:
 **Optional** Determines whether a result file with the same name is overwritten. The default value, false, indicates that the new result file is created. If the value is true, the file is overwritten and retains the same file name.
 
 ### `protocolInput`
-**Optional** Use this argument to run a Web UI test in parallel on different browsers.
+**Optional** You can use this option with additional arguments as follows:
+- To run a Web UI test in parallel on different browsers, input the value: all.available.targets.in.parallel=all
+- To specify the Web UI preferences such as highlighting the page element and capturing screens, input the value: webui.highlight=<value>;webui.report.screenshots=<value>
+- To run only the failed tests from a previous playback in an Accelerated Functional Test suite, input the value: runfailedtests=true
+- To automatically resolve the browser and driver incompatibility, while you play back the Web UI tests, input the value: webui.browser.driver.autoupdate=true
+- To apply guided-healing and self-healing features while you run Web UI tests, input the value: autoheal=true
 
 ### `publish`
-**Optional** You can use this parameter to publish test results to the Server. The format is: serverURL#project.name=projectName&amp;teamspace.name=teamspaceName.
+**Optional** You can use this parameter to publish test results to the Server. The format is: serverURL#project.name=projectName&amp;teamspace.name=teamspaceName. If the name of the project or team space contains a special character, then you must replace it with %<Hex_value_of_special_character>.
 
 ### `publishFor`
  **Optional** You can use this option to publish the test results based on the completion status of the tests. The supported values are FAIL,PASS,INCONCLUSIVE,ERROR,ALL.
