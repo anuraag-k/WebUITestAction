@@ -12,8 +12,8 @@ jobs:
            with:
             workspace: C:\Users\anuraag.k\IBM\rationalsdp\workspace
             project: WebUI1
-            suite: C1
+            suite: Test1
             imshared: C:\Program Files\IBM\IBMIMShared
-            varFile: C:\Users\anuraag.k\IBM\rationalsdp\workspace\WebUI1\varfile.varinit
+            swapDatasets: /WebUI1/test2.csv:/WebUI1/test.csv
             
             
