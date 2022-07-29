@@ -133,3 +133,6 @@ jobs:
 
 ### `varFile`
 **Optional** The complete path to the XML file that contains the variable name and value pairs.
+
+### `vmArgs`
+**Optional** To specify the Java™ maximum heap size for the Java™ process that controls the command line playback, use the option with the -Xmx argument. For example, when you input -Xmx4096m, it specifies a maximum heap size of 4096m. To execute tests in parallel on all mobile devices, which are in passive mode, connected to the workbench and ready for playback, input the value: "-Dall.available.targets.in.parallel=true". To execute tests in parallel on all supported desktop browsers and connected mobile devices, input the value "-Dall.available.targets.in.parallel=all". To execute tests in parallel on selected desktop browsers and connected mobile devices, input the value "-Dall.available.targets.in.parallel=browser1,browswer2,browser3". You must separate browser names with a comma. For example, firefox, ff, chrome, ie, ie64, safari, "-Dall.available.targets.in.parallel=browser1,browser2,browser3".
