@@ -25,6 +25,10 @@ inputs:
     description: 'Use this option to replace dataset values during a test or schedule run. You must ensure that both original and new datasets are in the same workspace and have the same column names. You must also include the path to the dataset. For example, /project_name/ds_path/ds_filename.csv:/project_name/ds_path/new_ds_filename.csv'
     required: false
 
+  exportLog:
+    description: 'You can use this parameter to specify the file directory path to store the exported HTTP test log. You can provide multiple parameter entries when running multiple tests. You must use a colon to separate the parameter entries. For example: c:/logexport.txt:c:/secondlogexport.txt'
+    required: false
+
   exportReport:
     description: 'Use this option to export the unified report to any of the formats - PDF, XML or HTML. For example, to export the report to only the pdf format, you can input: type=unified;format=pdf;folder=path;filename=testreport. If you want to export the report to multiple formats, you can specify the file formats as comma-separated values.'
     required: false
