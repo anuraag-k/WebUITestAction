@@ -125,7 +125,7 @@ const main = async () => {
                 script = script.concat(' -exportstatsformat ' + '"' + exportstatsformat + '"')
             }
             if (publish) {
-                script = script.concat(' -publish ' + '"' + publish + '"')
+                script = script.concat(' -publish ' + '"""' + publish + '"""')
             }
             if (publish_for) {
                 script = script.concat(' -publish_for ' + '"' + publish_for + '"')
