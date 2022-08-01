@@ -24,9 +24,9 @@ jobs:
          - name: HCL OneTest WEBUI
            uses: anuraag-k/WebUITestAction@main
            with:
-            workspace: C:\Users\anuraag.k\HCL\hclonetest\workspace_ui
-            project: WebUI1
-            suite: Test1
+            workspace: 
+            project: 
+            suite: 
             imshared:
             configFile: 
             exportLog: 
