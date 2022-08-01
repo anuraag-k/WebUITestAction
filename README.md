@@ -11,6 +11,7 @@ This action enables you to run HCL OneTest WEBUI tests.
 ## Example usage
 
 ```yaml
+
 name: HCL OneTest WEBUI
 
 on: workflow_dispatch
@@ -23,26 +24,26 @@ jobs:
          - name: HCL OneTest WEBUI
            uses: anuraag-k/WebUITestAction@main
            with:
-            workspace: 
-            project: 
-            suite: 
-            imShared: 
+            workspace: C:\Users\anuraag.k\HCL\hclonetest\workspace_ui
+            project: WebUI1
+            suite: Test1
+            imshared:
             configFile: 
-            swapDatasets: 
             exportLog: 
             exportReport: 
-            exportStats: 
-            exportStatsHtml: 
-            exportStatsFormat: 
             exportStatReportList: 
-            imports: 
+            exportStats: 
+            exportStatsFormat: 
+            exportStatsHtml: 
+            imports:
             labels: 
             overwrite: 
             protocolInput: 
             publish: 
             publishFor: 
             publishReports: 
-            results: 
+            results:
+            swapDatasets: 
             userComments:
             varFile: 
             vmArgs: 
@@ -79,10 +80,6 @@ jobs:
 
 **Optional** The complete path to a file that contains the parameters for a test or schedule run, If Config file is specified then no other fields will be required.
 
-### `swapDatasets`
-
-**Optional** Use this option to replace dataset values during a test or schedule run. You must ensure that both original and new datasets are in the same workspace and have the same column names. You must also include the path to the dataset. For example, /project_name/ds_path/ds_filename.csv:/project_name/ds_path/new_ds_filename.csv
-
 ### `exportLog`
 
 **Optional** You can use this parameter to specify the file directory path to store the exported HTTP test log. You can provide multiple parameter entries when running multiple tests. You must use a colon to separate the parameter entries. For example: c:/logexport.txt:c:/secondlogexport.txt
@@ -91,19 +88,19 @@ jobs:
 
 **Optional** Use this option to export the unified report of UI tests to the file formats such as PDF, HTML, and XML. For example, to export the report to only the PDF format, you can input "type=unified;format=pdf;folder=Exportedreport102;filename=testreport"
 
+### `exportStatReportList`
+**Optional** You can use this option to specify a comma-separated list of report IDs along with exportstats or exportstatshtml to list the reports that you want to export in place of the default reports, or the reports selected under Preferences. To retrieve the report IDs, navigate to Window > Preferences > Test > Performance Test Reports > Export Reports from HCL OneTest UI and under Select reports to export, select the required reports, and click Copy ID to clipboard.
+
 ### `exportStats`
 
 **Optional** The complete path to a directory in which to store exported statistical report data.
 
-### `exportStatsHtml`
-
-**Optional** Specify the complete path to a directory in which to export web analytic results. Analyze the results on a web browser without using the HCL OneTest Studio. If you are running multiple tests, do not provide a value in this field. The web analytic results will be exported to Jenkins workspace.
-
 ### `exportStatsFormat`
 **Optional** Use this field to enter one or more formats for the reports that you want to export by using a comma as a separator. The options are simple.csv, full.csv, simple.json, full.json, csv, and json. When you want to export both simple and full reports in json or csv format, you can specify json or csv as the options. The reports are saved to the location specified in the exportStats field. This field must be used in conjunction with exportStats field.
 
-### `exportStatReportList`
-**Optional** You can use this option to specify a comma-separated list of report IDs along with exportstats or exportstatshtml to list the reports that you want to export in place of the default reports, or the reports selected under Preferences. To retrieve the report IDs, navigate to Window > Preferences > Test > Performance Test Reports > Export Reports from HCL OneTest UI and under Select reports to export, select the required reports, and click Copy ID to clipboard.
+### `exportStatsHtml`
+
+**Optional** Specify the complete path to a directory in which to export web analytic results. Analyze the results on a web browser without using the HCL OneTest Studio. If you are running multiple tests, do not provide a value in this field. The web analytic results will be exported to Jenkins workspace.
 
 ### `imports`
 **Optional** Path of the Project location to be imported. You can also use an empty workspace folder on your computer to import the UI Test project resources and run the tests. 
@@ -134,6 +131,9 @@ jobs:
 ### `results`
 **Optional** Specify a name for the results file. If you do not specify a name, the test or schedule name appended by the timestamp is used for the name. The results file is stored in the Results directory. If you are running multiple tests, do not provide a name for the results file.
 
+### `swapDatasets`
+**Optional** Use this option to replace dataset values during a test or schedule run. You must ensure that both original and new datasets are in the same workspace and have the same column names. You must also include the path to the dataset. For example, /project_name/ds_path/ds_filename.csv:/project_name/ds_path/new_ds_filename.csv
+    
 ### `userComments`
 **Optional** Add text to display it in the User Comments row of the report.
 
