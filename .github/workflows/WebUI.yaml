@@ -15,21 +15,21 @@ jobs:
             suite: Test1
             imshared:
             configFile: 
-            swapDatasets: 
-            exportLog: D:\reports\newlogs.txt
+            exportLog: 
             exportReport: 
-            exportStats: 
-            exportStatsHtml: 
-            exportStatsFormat: 
             exportStatReportList: 
-            imports: 
+            exportStats: 
+            exportStatsFormat: 
+            exportStatsHtml: 
+            imports:
             labels: 
             overwrite: 
             protocolInput: 
             publish: 
             publishFor: 
             publishReports: 
-            results: 
+            results:
+            swapDatasets: 
             userComments:
             varFile: 
-            vmArgs:             
+            vmArgs: 
