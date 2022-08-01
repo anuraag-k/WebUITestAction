@@ -27,7 +27,7 @@ jobs:
             protocolInput: 
             publish: https://master-hcl.tp-k8s.nonprod.hclpnp.com/#project.name=A_P2&teamspace.name=Initial%20Team%20Space
             publishFor: 
-            publishReports: 
+            publishReports: TESTLOG
             results:
             swapDatasets: 
             userComments:
