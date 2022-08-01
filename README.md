@@ -114,7 +114,7 @@ jobs:
 ### `protocolInput`
 **Optional** You can use this option with additional arguments as follows:
 - To run a Web UI test in parallel on different browsers, input the value: all.available.targets.in.parallel=all
-- To specify the Web UI preferences such as highlighting the page element and capturing screens, input the value: webui.highlight=<value>;webui.report.screenshots=<value>
+- To specify the Web UI preferences such as highlighting the page element and capturing screens, input the value: webui.highlight=value;webui.report.screenshots=value
 - To run only the failed tests from a previous playback in an Accelerated Functional Test suite, input the value: runfailedtests=true
 - To automatically resolve the browser and driver incompatibility, while you play back the Web UI tests, input the value: webui.browser.driver.autoupdate=true
 - To apply guided-healing and self-healing features while you run Web UI tests, input the value: autoheal=true
