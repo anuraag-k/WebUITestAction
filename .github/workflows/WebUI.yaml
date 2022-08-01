@@ -24,7 +24,7 @@ jobs:
             imports:
             labels: 
             overwrite: 
-            protocolInput: 
+            protocolInput: all.available.targets.in.parallel=chrome
             publish: https://master-hcl.tp-k8s.nonprod.hclpnp.com/#project.name=A_P2&teamspace.name=Initial%20Team%20Space
             publishFor: 
             publishReports: TESTLOG
