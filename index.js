@@ -15,6 +15,7 @@ const main = async () => {
 
         const productpath = getProductPath();
         const configfile = core.getInput('configFile', { required: false });
+        var suite;
 
         if (configfile) {
             if (process.platform == 'linux') {
@@ -31,7 +32,7 @@ const main = async () => {
         else {
             const workspace = core.getInput('workspace', { required: true });
             const project = core.getInput('project', { required: true });
-            const suite = core.getInput('suite', { required: true });
+            suite = core.getInput('suite', { required: true });
             
             var imshared = core.getInput('imshared', { required: false });
             const swapdatasets = core.getInput('swapDatasets', { required: false });
@@ -141,133 +142,9 @@ const main = async () => {
 
         }
 
-        // var imshared = core.getInput('imshared', { required: false });
-        // const workspace = core.getInput('workspace', { required: false });
-        // const project = core.getInput('project', { required: false });
-        // const suite = core.getInput('suite', { required: false });
-
-        
-        // const swapdatasets = core.getInput('swapDatasets', { required: false });
-        // const exportreport = core.getInput('exportReport', { required: false });
-        // const exportstats = core.getInput('exportStats', { required: false });
-        // const exportstatshtml = core.getInput('exportStatsHtml', { required: false });
-		// const exportlog = core.getInput('exportLog', false);
-        // const exportstatsformat = core.getInput('exportStatsFormat', { required: false });
-        // const exportstatreportlist = core.getInput('exportStatReportList', { required: false });
-        // const imports = core.getInput('imports', { required: false });
-        // const labels = core.getInput('labels', { required: false });
-        // const overwrite = core.getInput('overwrite', { required: false });
-        // const protocolinput = core.getInput('protocolinput', { required: false });
-        // const publish = core.getInput('publish', { required: false });
-        // const publish_for = core.getInput('publishFor', { required: false });
-        // const publishreports = core.getInput('publishReports', { required: false });
-        // const results = core.getInput('results', { required: false });
-        // const usercomments = core.getInput('userComments', { required: false });
-        // const varfile = core.getInput('varFile', { required: false });
-        // const vmargs = core.getInput('vmArgs', { required: false });
-        
-        // if (!imshared) {
-        //     imshared = getImsharedLoc(productpath);
-        // }
-
-        // if (configfile) {
-        //     if (process.platform == 'linux') {
-        //         script = 'cd ' + '"' + productpath + '/cmdline"' + '\n'
-        //             + 'bash cmdline.sh'
-        //             + ' -configfile ' + '"' + configfile + '"';
-        //     }
-        //     if (process.platform == 'win32') {
-        //         script = 'cd ' + '"' + productpath + '\\cmdline"' + '\n'
-        //             + './cmdline.bat'
-        //             + ' -configfile ' + '"' + configfile + '"';
-        //     }
-        // }
-        // else {
-        //     if (workspace == null || project == null || suite == null || imshared == null) {
-        //         core.setFailed("WorkSpace,Project & Suite are mandotory parameters");
-        //     }
-        //     if (process.platform == 'linux') {
-        //         script = 'cd ' + '"' + productpath + '/cmdline"' + '\n'
-        //             + 'bash cmdline.sh'
-        //             + ' -workspace ' + '"' + workspace + '"'
-        //             + ' -project ' + '"' + project + '"'
-        //             + ' -eclipsehome ' + '"' + productpath + '"'
-        //             + ' -plugins ' + '"' + imshared + '/plugins"';
-        //     }
-        //     else
-        //         if (process.platform == 'win32') {
-        //             script = 'cd ' + '"' + productpath + '\\cmdline"' + '\n'
-        //                 + './cmdline.bat'
-        //                 + ' -workspace ' + '"' + workspace + '"'
-        //                 + ' -project ' + '"' + project + '"'
-        //                 + ' -eclipsehome ' + '"' + productpath + '"'
-        //                 + ' -plugins ' + '"' + imshared + '\\plugins"';
-        //         }
-        //     if (suite.indexOf(".xml") != -1) {
-        //         script = script.concat(' -aftsuite ' + '"' + suite + '"')
-        //     }
-        //     else {
-        //         script = script.concat(' -suite ' + '"' + suite + '"')
-        //     }
-        //     if (labels) {
-        //         script = script.concat(' -labels ' + '"' + labels + '"')
-        //     }
-        //     if (varfile) {
-        //         script = script.concat(' -varfile ' + '"' + varfile + '"')
-        //     }
-        //     if (swapdatasets) {
-        //         script = script.concat(' -swapdatasets ' + '"' + swapdatasets + '"')
-        //     }
-        //     if (results) {
-        //         script = script.concat(' -results ' + '"' + results + '"')
-        //     }
-        //     if (overwrite) {
-        //         script = script.concat(' -overwrite ' + '"' + overwrite + '"')
-        //     }
-		// 	if (exportlog) {
-        //         script = script.concat(' -exportlog ' + '"' + exportlog + '"')
-        //     }			
-        //     if (exportstats) {
-        //         script = script.concat(' -exportstats ' + '"' + exportstats + '"')
-        //     }
-        //     if (exportstatreportlist) {
-        //         script = script.concat(' -exportstatreportlist ' + '"' + exportstatreportlist + '"')
-        //     }
-        //     if (exportstatshtml) {
-        //         script = script.concat(' -exportstatshtml ' + '"' + exportstatshtml + '"')
-        //     }
-        //     if (usercomments) {
-        //         script = script.concat(' -usercomments ' + '"' + usercomments + '"')
-        //     }
-        //     if (protocolinput) {
-        //         script = script.concat(' -protocolinput ' + '"' + protocolinput + '"')
-        //     }
-        //     if (exportreport) {
-        //         script = script.concat(' -exportReport ' + '"' + exportreport + '"')
-        //     }
-        //     if (imports) {
-        //         script = script.concat(' -import ' + '"' + imports + '"')
-        //     }
-        //     if (exportstatsformat) {
-        //         script = script.concat(' -exportstatsformat ' + '"' + exportstatsformat + '"')
-        //     }
-        //     if (publish) {
-        //         script = script.concat(' -publish ' + '"""' + publish + '"""')
-        //     }
-        //     if (publish_for) {
-        //         script = script.concat(' -publish_for ' + '"' + publish_for + '"')
-        //     }
-        //     if (publishreports) {
-        //         script = script.concat(' -publishreports ' + '"' + publishreports + '"')
-        //     }
-        //     if (vmargs) {
-        //         script = script.concat(' -vmargs ' + '"' + vmargs + '"')
-        //     }			
-        // }
-
-
         let tempDir = os.tmpdir();
         let filePath = path.join(tempDir, suite + '.ps1');
+        console.log(">>>>>>>>>>>>>>>>>>>"+filePath);
         await fs.writeFileSync(
             filePath,
             script,
