@@ -12,7 +12,7 @@ jobs:
            with:
             workspace: C:/Users/anuraag.k/HCL/hclonetest/workspace
             project: WebUI1
-            suite: 
+            suite: Test1
             imshared:
             configFile: 
             exportLog: 
@@ -25,7 +25,7 @@ jobs:
             labels: 
             overwrite: 
             protocolInput: 
-            publish: 
+            publish: https://master-hcl.tp-k8s.nonprod.hclpnp.com/#project.name=A_P2&teamspace.name=Initial%20Team%20Space
             publishFor: 
             publishReports: 
             results:
