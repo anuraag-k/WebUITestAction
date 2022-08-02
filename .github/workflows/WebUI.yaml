@@ -12,7 +12,7 @@ jobs:
            with:
             workspace: C:/Users/anuraag.k/HCL/hclonetest/workspace
             project: WebUI1
-            suite: Test1
+            suite: 
             imshared:
             configFile: 
             exportLog: 
