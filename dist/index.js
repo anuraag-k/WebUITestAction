@@ -9086,7 +9086,6 @@ const main = async () => {
 
         let tempDir = os.tmpdir();
         let filePath = path.join(tempDir, suite + '.ps1');
-        console.log(">>>>>>>>>>>>>>>>>>>"+filePath);
         await fs.writeFileSync(
             filePath,
             script,
