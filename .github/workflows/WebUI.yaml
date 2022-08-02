@@ -14,7 +14,7 @@ jobs:
             project: 
             suite: 
             imshared:
-            configFile: C:\Users\anuraag.k\HCL\hclonetest\workspace\WebUI1
+            configFile: C:\Users\anuraag.k\HCL\hclonetest\workspace\WebUI1\config.txt
             exportLog: 
             exportReport: 
             exportStatReportList: 
@@ -27,7 +27,7 @@ jobs:
             protocolInput: 
             publish: 
             publishFor: 
-            publishReports: TESTLOG
+            publishReports: 
             results:
             swapDatasets: 
             userComments:
