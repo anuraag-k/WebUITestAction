@@ -10,8 +10,8 @@ jobs:
          - name: HCL OneTest WEBUI
            uses: anuraag-k/WebUITestAction@main
            with:
-            workspace: C:/Users/anuraag.k/HCL/hclonetest/workspace
-            project: WebUI1
+            workspace: 
+            project: 
             suite: 
             imshared:
             configFile: 
@@ -30,6 +30,6 @@ jobs:
             publishReports: 
             results:
             swapDatasets: 
-            userComments:
+            userComments: 
             varFile: 
             vmArgs: 
