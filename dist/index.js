@@ -9022,64 +9022,64 @@ const main = async () => {
                         + ' -plugins ' + '"' + imshared + '\\plugins"';
                 }
             if (suite.indexOf(".xml") != -1) {
-                script = script.concat(' -aftsuite ' + '"' + suite + '"')
+                script = script.concat(' -aftsuite ' + '"' + suite + '"');
             }
             else {
-                script = script.concat(' -suite ' + '"' + suite + '"')
+                script = script.concat(' -suite ' + '"' + suite + '"');
             }
             if (labels) {
-                script = script.concat(' -labels ' + '"' + labels + '"')
+                script = script.concat(' -labels ' + '"' + labels + '"');
             }
             if (varfile) {
-                script = script.concat(' -varfile ' + '"' + varfile + '"')
+                script = script.concat(' -varfile ' + '"' + varfile + '"');
             }
             if (swapdatasets) {
-                script = script.concat(' -swapdatasets ' + '"' + swapdatasets + '"')
+                script = script.concat(' -swapdatasets ' + '"' + swapdatasets + '"');
             }
             if (results) {
-                script = script.concat(' -results ' + '"' + results + '"')
+                script = script.concat(' -results ' + '"' + results + '"');
             }
             if (overwrite) {
-                script = script.concat(' -overwrite ' + '"' + overwrite + '"')
+                script = script.concat(' -overwrite ' + '"' + overwrite + '"');
             }
             if (exportlog) {
-                script = script.concat(' -exportlog ' + '"' + exportlog + '"')
+                script = script.concat(' -exportlog ' + '"' + exportlog + '"');
             }
             if (exportstats) {
-                script = script.concat(' -exportstats ' + '"' + exportstats + '"')
+                script = script.concat(' -exportstats ' + '"' + exportstats + '"');
             }
             if (exportstatreportlist) {
-                script = script.concat(' -exportstatreportlist ' + '"' + exportstatreportlist + '"')
+                script = script.concat(' -exportstatreportlist ' + '"' + exportstatreportlist + '"');
             }
             if (exportstatshtml) {
-                script = script.concat(' -exportstatshtml ' + '"' + exportstatshtml + '"')
+                script = script.concat(' -exportstatshtml ' + '"' + exportstatshtml + '"');
             }
             if (usercomments) {
-                script = script.concat(' -usercomments ' + '"' + usercomments + '"')
+                script = script.concat(' -usercomments ' + '"' + usercomments + '"');
             }
             if (protocolinput) {
-                script = script.concat(' -protocolinput ' + '"' + protocolinput + '"')
+                script = script.concat(' -protocolinput ' + '"' + protocolinput + '"');
             }
             if (exportreport) {
-                script = script.concat(' -exportReport ' + '"' + exportreport + '"')
+                script = script.concat(' -exportReport ' + '"' + exportreport + '"');
             }
             if (imports) {
-                script = script.concat(' -import ' + '"' + imports + '"')
+                script = script.concat(' -import ' + '"' + imports + '"');
             }
             if (exportstatsformat) {
-                script = script.concat(' -exportstatsformat ' + '"' + exportstatsformat + '"')
+                script = script.concat(' -exportstatsformat ' + '"' + exportstatsformat + '"');
             }
             if (publish) {
-                script = script.concat(' -publish ' + '"""' + publish + '"""')
+                script = script.concat(' -publish ' + '"""' + publish + '"""');
             }
             if (publish_for) {
-                script = script.concat(' -publish_for ' + '"' + publish_for + '"')
+                script = script.concat(' -publish_for ' + '"' + publish_for + '"');
             }
             if (publishreports) {
-                script = script.concat(' -publishreports ' + '"' + publishreports + '"')
+                script = script.concat(' -publishreports ' + '"' + publishreports + '"');
             }
             if (vmargs) {
-                script = script.concat(' -vmargs ' + '"' + vmargs + '"')
+                script = script.concat(' -vmargs ' + '"' + vmargs + '"');
             }
 
         }
