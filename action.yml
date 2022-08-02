@@ -1,5 +1,5 @@
 name: 'HCL OneTest WEBUI'
-description: 'This Action to execute WebUI test from GitHub Action.'
+description: 'HCL OneTest WEBUI action to execute WebUI test from GitHub Action.'
 inputs:
   workspace:
     description: 'The complete path to the Eclipse workspace, required if Config File is not specified'
