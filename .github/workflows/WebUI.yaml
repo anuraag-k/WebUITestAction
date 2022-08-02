@@ -10,9 +10,9 @@ jobs:
          - name: HCL OneTest WEBUI
            uses: anuraag-k/WebUITestAction@main
            with:
-            workspace: C:/Users/anuraag.k/HCL/hclonetest/workspace
-            project: WebUI1
-            suite: Test1
+            workspace: 
+            project: 
+            suite: 
             imshared:
             configFile: 
             exportLog: 
@@ -22,14 +22,14 @@ jobs:
             exportStatsFormat: 
             exportStatsHtml: 
             imports:
-            labels: l1,l2
-            overwrite: false
+            labels: 
+            overwrite: 
             protocolInput: 
-            publish: https://master-hcl.tp-k8s.nonprod.hclpnp.com/#project.name=A_P2&teamspace.name=Initial%20Team%20Space
+            publish: 
             publishFor: 
             publishReports: 
             results:
             swapDatasets: 
-            userComments: This is a user comment
+            userComments: 
             varFile: 
             vmArgs: 
