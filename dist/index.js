@@ -8975,7 +8975,7 @@ const main = async () => {
             const workspace = core.getInput('workspace', { required: true });
             const project = core.getInput('project', { required: true });
             suite = core.getInput('suite', { required: true });
-            
+
             var imshared = core.getInput('imshared', { required: false });
             const swapdatasets = core.getInput('swapDatasets', { required: false });
             const exportreport = core.getInput('exportReport', { required: false });
@@ -9042,9 +9042,9 @@ const main = async () => {
             if (overwrite) {
                 script = script.concat(' -overwrite ' + '"' + overwrite + '"')
             }
-			if (exportlog) {
+            if (exportlog) {
                 script = script.concat(' -exportlog ' + '"' + exportlog + '"')
-            }			
+            }
             if (exportstats) {
                 script = script.concat(' -exportstats ' + '"' + exportstats + '"')
             }
@@ -9080,7 +9080,7 @@ const main = async () => {
             }
             if (vmargs) {
                 script = script.concat(' -vmargs ' + '"' + vmargs + '"')
-            }		
+            }
 
         }
 
