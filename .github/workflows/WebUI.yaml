@@ -14,7 +14,7 @@ jobs:
             project: WebUI1
             suite: Test1
             imshared:
-            configFile: C:\Users\anuraag.k\HCL\hclonetest\workspace\WebUI1\config.txt
+            configFile: 
             exportLog: 
             exportReport: 
             exportStatReportList: 
