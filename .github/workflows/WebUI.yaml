@@ -14,7 +14,7 @@ jobs:
             project: 
             suite: 
             imshared:
-            configFile: 
+            configFile: C:\Users\anuraag.k\HCL\hclonetest\workspace\WebUI1
             exportLog: 
             exportReport: 
             exportStatReportList: 
@@ -24,8 +24,8 @@ jobs:
             imports:
             labels: 
             overwrite: 
-            protocolInput: all.available.targets.in.parallel=chrome
-            publish: https://master-hcl.tp-k8s.nonprod.hclpnp.com/#project.name=A_P2&teamspace.name=Initial%20Team%20Space
+            protocolInput: 
+            publish: 
             publishFor: 
             publishReports: TESTLOG
             results:
