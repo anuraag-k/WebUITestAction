@@ -22,14 +22,14 @@ jobs:
             exportStatsFormat: 
             exportStatsHtml: 
             imports:
-            labels: 
-            overwrite: 
+            labels: l1,l2
+            overwrite: false
             protocolInput: 
             publish: https://master-hcl.tp-k8s.nonprod.hclpnp.com/#project.name=A_P2&teamspace.name=Initial%20Team%20Space
             publishFor: 
             publishReports: 
             results:
             swapDatasets: 
-            userComments:
+            userComments: This is a user comment
             varFile: 
             vmArgs: 
