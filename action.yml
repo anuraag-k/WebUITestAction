@@ -1,5 +1,8 @@
-name: 'HCL OneTest WEBUI'
-description: 'HCL OneTest WEBUI action to execute WebUI test from GitHub Action.'
+name: 'HCL OneTest WebUI GitHub Action'
+description: 'Execute HCL OneTest WebUI based tests and compound tests from GitHub Actions workflows.'
+branding:
+  icon: 'check-square'
+  color: 'purple'
 inputs:
   workspace:
     description: 'The complete path to the Eclipse workspace, required if Config File is not specified'
