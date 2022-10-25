@@ -9667,6 +9667,7 @@ const main = async () => {
         const productpath = getProductPath();
         const configfile = core.getInput('configFile', { required: false });
         var suite;
+        var script;
 
         if (configfile) {
             if (process.platform == 'linux') {
