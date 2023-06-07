@@ -10,9 +10,9 @@ jobs:
          - name: HCL OneTest WEBUI
            uses: anuraag-k/WebUITestAction@main
            with:
-            workspace: C:\Users\anuraag.k\HCL\hclonetest\workspace
-            project: UI1
-            suite: Tests\Test1
+            workspace: C:\Users\anuraag.k\HCL\hclonetest\workspaceNew
+            project: WebUI1
+            suite: Test1
             imshared:
             configFile: 
             exportLog: 
